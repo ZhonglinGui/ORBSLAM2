@@ -1,0 +1,52 @@
+noremap i k
+noremap j h
+noremap k j
+
+noremap I 5k
+noremap J 5h
+noremap K 5j
+noremap L 5l
+
+noremap h i
+noremap H I
+
+noremap n nzz
+noremap N nzz
+
+noremap <LEADER><CR> :nohlsearch<CR>
+nnoremap <Space>fu :action FindUsages<CR>
+
+map s <nop>
+map S :w<CR>
+map Q :q<CR>
+map R :source $MYVIMRC<CR>
+
+let mapleader=" "
+      
+syntax on
+
+set number
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+set vb t_vb=
+set hlsearch
+set incsearch
+exec "nohlsearch"
+set ignorecase
+set smartcase
+
+set clipboard=unnamedplus
+"vnoremap Y "+y
+"noremap P "+p 
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'connorholyday/vim-snazzy'
+
+call plug#end()
+
+color snazzy
+
+let g:SnazzyTransparent = 1
